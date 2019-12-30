@@ -1,1 +1,20 @@
-
+.container {
+  display: grid;
+  margin: -10px;
+  grid-template-columns: 220px auto 220px;
+  grid-template-rows: 80px 600px;
+}
+.item-a {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: rgb(154, 221, 152);
+}
+.item-b {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(158, 111, 202);
+}
