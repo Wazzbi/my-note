@@ -3,3 +3,22 @@
   padding-left: 10px;
   font-family: Arial CE, sans-serif;
 }
+.colored-icon {
+  color: rgb(2, 1, 1);
+  background: none;
+  position: relative;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  margin-top: 20px;
+  position: relative;
+  top: 50%;
+  background: rgb(154, 221, 152);
+  border-radius: 50%;
+
+  outline: none;
+}
