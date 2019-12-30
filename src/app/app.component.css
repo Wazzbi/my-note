@@ -1,8 +1,8 @@
 .container {
   display: grid;
-  margin: -10px;
+  margin: 0px;
   grid-template-columns: 220px auto 220px;
-  grid-template-rows: 80px 600px;
+  grid-template-rows: 80px 600px 250px auto;
 }
 .item-a {
   grid-column-start: 1;
@@ -17,4 +17,11 @@
   grid-row-start: 2;
   grid-row-end: 3;
   background-color: rgb(158, 111, 202);
+}
+.item-c {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: rgb(95, 147, 241);
 }

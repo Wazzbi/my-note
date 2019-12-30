@@ -6,16 +6,24 @@ import { HomeComponent } from "./home/home.component";
 import { MainPanelComponent } from "./main-panel/main-panel.component";
 import { MatButtonModule, MatIconModule } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SavedFilesComponent } from './saved-files/saved-files.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MainPanelComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      HomeComponent,
+      MainPanelComponent,
+      SavedFilesComponent
+   ],
+   imports: [
+      BrowserModule,
+      BrowserAnimationsModule,
+      MatButtonModule,
+      MatIconModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}
