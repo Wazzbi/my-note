@@ -1,4 +1,4 @@
 export class Note {
-  id: number;
+  id: Number;
   data: String;
 }

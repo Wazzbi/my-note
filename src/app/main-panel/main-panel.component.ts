@@ -1,3 +1,4 @@
+import { SavedFilesComponent } from "./../saved-files/saved-files.component";
 import { element } from "protractor";
 import { MyServiceService } from "./../my-service.service";
 import { HomeComponent } from "./../home/home.component";
@@ -11,7 +12,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class MainPanelComponent implements OnInit {
   note: Note;
-  notes: Note[];
+  savedFiles: SavedFilesComponent;
   input: HomeComponent;
 
   constructor(private myServiceService: MyServiceService) {}
@@ -20,10 +21,14 @@ export class MainPanelComponent implements OnInit {
 
   saveText(): void {
     let za = <HTMLTextAreaElement>document.getElementById("input");
-    let note = new Note();
-    note.data = za.value;
-    this.myServiceService.addNote(note).subscribe(note => {
-      this.notes.push(note);
+    this.note = new Note();
+    this.note.data = za.value;
+    this.note.id = 999;
+    console.log(
+      `poznamka s id=${this.note.id} obsahuje data=${this.note.data}`
+    );
+    this.myServiceService.addNote(this.note).subscribe(note => {
+      this.savedFiles.notes.push(note);
     });
     this.clear();
   }

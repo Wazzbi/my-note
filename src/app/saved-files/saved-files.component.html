@@ -1,3 +1,7 @@
-<p class="text-field">
-  saved-files placeholder!
-</p>
+<ul class="heroes">
+  <li *ngFor="let note of notes">
+    <a>
+      <span class="badge">{{ note.id }}</span> {{ note.data }}
+    </a>
+  </li>
+</ul>

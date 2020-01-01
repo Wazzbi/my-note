@@ -5,7 +5,7 @@ import { InMemoryDbService } from "angular-in-memory-web-api";
 @Injectable({
   providedIn: "root"
 })
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const notes = [
       { id: 1, data: "Argentina" },
@@ -13,8 +13,9 @@ export class InMemoryDataService {
     ];
     return { notes };
   }
-
+  /*
   genId(notes: Note[]): number {
     return notes.length > 0 ? Math.max(...notes.map(note => note.id)) + 1 : 1;
   }
+  */
 }
