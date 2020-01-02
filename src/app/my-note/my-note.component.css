@@ -2,7 +2,7 @@
 .container {
   display: grid;
   margin: 0px;
-  grid-template-columns: 220px auto 220px;
+  grid-template-columns: 300px auto 300px;
   grid-template-rows: 80px 600px 250px auto;
 }
 .item-a {
@@ -25,6 +25,8 @@
   grid-row-start: 3;
   grid-row-end: 4;
   background-color: rgb(84, 117, 228);
+  overflow-y: auto;
+  white-space: nowrap;
 }
 /*panel*/
 .colored-icon {
@@ -73,9 +75,10 @@ textarea {
 }
 
 .file-unit {
-  width: 200px;
   display: inline-block;
   margin: 20px;
+  width: 300px;
+  height: 20%;
 }
 
 .file-block {
@@ -85,7 +88,26 @@ textarea {
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
-  height: 150px;
+  height: 120px;
   background-color: #795548;
   border-radius: 2px;
+}
+
+/*scroll bar*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 30px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #00bd86;
+}
+
+::-webkit-scrollbar:vertical {
+  display: none;
 }
