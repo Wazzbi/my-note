@@ -15,6 +15,11 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 1, data: "Dummy number 1" },
       { id: 2, data: "Dummy number 2" },
       { id: 3, data: "Dummy number 3" },
+      { id: 4, data: "Dummy number 4" },
+      { id: 4, data: "Dummy number 4" },
+      { id: 1, data: "Dummy number 1" },
+      { id: 2, data: "Dummy number 2" },
+      { id: 3, data: "Dummy number 3" },
       { id: 4, data: "Dummy number 4" }
     ];
     return { notes };

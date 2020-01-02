@@ -2,8 +2,10 @@
 .container {
   display: grid;
   margin: 0px;
-  grid-template-columns: 300px auto 300px;
-  grid-template-rows: 80px 600px 250px auto;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: 80px auto 250px;
+  width: 100vw;
+  height: 100vh;
 }
 .item-a {
   grid-column-start: 1;
@@ -40,7 +42,7 @@
 }
 
 .button {
-  margin-top: 20px;
+  margin-top: 25px;
   position: relative;
   top: 50%;
   background: rgb(53, 93, 224);
@@ -70,42 +72,57 @@ textarea {
 }
 /*saved files*/
 .wrapper-c {
-  margin: 0 50px;
   text-align: center;
 }
 
 .file-unit {
   display: inline-block;
-  margin: 20px;
-  width: 300px;
-  height: 20%;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 200px;
 }
 
 .file-block {
-  padding: 30px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+  resize: none;
+  padding: 20%;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
-  height: 120px;
+  height: 150px;
   background-color: #795548;
-  border-radius: 2px;
+  border-radius: 10px;
+  border-width: 0px;
+}
+
+.file-block:hover {
+  background-color: #00bd86;
 }
 
 /*scroll bar*/
 ::-webkit-scrollbar {
   width: 10px;
-  height: 30px;
+  height: 26px;
+  border-radius: 13px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+  border-radius: 13px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 15px;
+  border-radius: 13px;
   background-color: #00bd86;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
 }
 
 ::-webkit-scrollbar:vertical {

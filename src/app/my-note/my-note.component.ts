@@ -30,4 +30,9 @@ export class MyNoteComponent implements OnInit {
   getNotes(): void {
     this.myServiceService.getNotes().subscribe(notes => (this.notes = notes));
   }
+
+  //TODO dolělat aby se text vracel do textarea asi přes servisku
+  //vytvořit objekt a ten načíst
+  //rozdělaný my-note.html row 23
+  showText(id: number): void {}
 }

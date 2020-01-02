@@ -9,17 +9,22 @@
   </div>
   <!-- text area -->
   <div class="item-b">
-    <textarea #input class="text-field" placeholder="Your text here"></textarea>
+    <textarea
+      id="input"
+      #input
+      class="text-field"
+      placeholder="Your text here"
+    ></textarea>
   </div>
   <!-- saved files -->
   <div class="item-c">
     <div class="wrapper-c">
       <a *ngFor="let note of notes" class="file-unit">
-        <div class="file-block">
-          <span>{{ note.id }}</span
-          ><br />
-          {{ note.data }}
-        </div>
+        <button class="file-block" (click)="showText(data.value)">
+          {{ note.id }}
+          <br />
+          <span #data>{{ note.data }}</span>
+        </button>
       </a>
     </div>
   </div>
