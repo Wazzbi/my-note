@@ -1,0 +1,24 @@
+<div class="container">
+  <!-- panel -->
+  <div class="item-a">
+    <div class="wrapper">
+      <button class="button" (click)="saveText(input.value); input.value = ''">
+        <mat-icon class="colored-icon">save</mat-icon>
+      </button>
+    </div>
+  </div>
+  <!-- text area -->
+  <div class="item-b">
+    <textarea #input class="text-field" placeholder="Your text here"></textarea>
+  </div>
+  <!-- saved files -->
+  <div class="item-c">
+    <ul class="heroes">
+      <li *ngFor="let note of notes">
+        <a>
+          <span class="badge">{{ note.id }}</span> {{ note.data }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

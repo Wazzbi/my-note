@@ -10,13 +10,15 @@ import { SavedFilesComponent } from "./saved-files/saved-files.component";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./in-memory-data.service";
 import { HttpClientModule } from "@angular/common/http";
+import { MyNoteComponent } from "./my-note/my-note.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MainPanelComponent,
-    SavedFilesComponent
+    SavedFilesComponent,
+    MyNoteComponent
   ],
   imports: [
     BrowserModule,
