@@ -8,14 +8,13 @@ import { InMemoryDbService } from "angular-in-memory-web-api";
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const notes = [
-      { id: 1, data: "Argentina" },
-      { id: 2, data: "sunny day" }
+      { id: 1, data: "Dummy number 1" },
+      { id: 2, data: "Dummy number 2" }
     ];
     return { notes };
   }
-  /*
+
   genId(notes: Note[]): number {
     return notes.length > 0 ? Math.max(...notes.map(note => note.id)) + 1 : 1;
   }
-  */
 }

@@ -27,11 +27,6 @@
   background-color: rgb(84, 117, 228);
 }
 /*panel*/
-.text-field {
-  padding-top: 10px;
-  padding-left: 10px;
-  font-family: Arial CE, sans-serif;
-}
 .colored-icon {
   color: rgb(2, 1, 1);
   background: none;
@@ -52,17 +47,15 @@
   outline: none;
 }
 /*text area*/
-.text-field {
-  padding-top: 10px;
-  padding-left: 10px;
-  font-family: Arial CE, sans-serif;
-}
 textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   resize: none;
+
+  font-family: Arial CE, sans-serif;
+  font-size: medium;
 
   width: 90%;
   height: 90%;
@@ -74,8 +67,25 @@ textarea {
   outline: none;
 }
 /*saved files*/
-.text-field {
-  padding-top: 10px;
-  padding-left: 10px;
-  font-family: Arial CE, sans-serif;
+.wrapper-c {
+  margin: 0 50px;
+  text-align: center;
+}
+
+.file-unit {
+  width: 200px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.file-block {
+  padding: 30px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  height: 150px;
+  background-color: #795548;
+  border-radius: 2px;
 }

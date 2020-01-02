@@ -13,12 +13,14 @@
   </div>
   <!-- saved files -->
   <div class="item-c">
-    <ul class="heroes">
-      <li *ngFor="let note of notes">
-        <a>
-          <span class="badge">{{ note.id }}</span> {{ note.data }}
-        </a>
-      </li>
-    </ul>
+    <div class="wrapper-c">
+      <a *ngFor="let note of notes" class="file-unit">
+        <div class="file-block">
+          <span>{{ note.id }}</span
+          ><br />
+          {{ note.data }}
+        </div>
+      </a>
+    </div>
   </div>
 </div>
