@@ -10,22 +10,22 @@
 
   <!--edit tools-->
   <div class="item-d">
-    <select id="select_font" onchange="changeStyle(this);">
+    <select id="select_font" onchange="changeStyle(this)">
       <option value="span-0" selected>None</option>
       <option value="span-b">Bold</option>
       <option value="span-u">Underlined</option>
       <option value="span-i">Italic</option>
     </select>
+    <button (click)="toBold()">Bold</button>
   </div>
 
   <!-- text area -->
   <div class="item-b">
     <div
+      contentEditable="true"
       class="textarea"
       id="input"
-      #input
       spellcheck="false"
-      contentEditable="true"
       data-text="Your text here..."
     ></div>
   </div>

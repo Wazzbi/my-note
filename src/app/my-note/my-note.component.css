@@ -160,21 +160,21 @@
 }
 
 /*edit tools*/
-.textarea .span-0 {
+.span-0 {
   /* Added to reset styles correctly */
   font-weight: normal; /* Reset b */
   text-decoration: none; /* Reset u */
   font-style: normal; /* Reset i */
 }
 
-.textarea .span-b {
+.span-b {
   font-weight: bold;
 }
 
-.textarea .span-u {
+.span-u {
   text-decoration: underline;
 }
 
-.textarea .span-i {
+.span-i {
   font-style: italic;
 }
