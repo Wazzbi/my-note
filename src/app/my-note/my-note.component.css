@@ -31,6 +31,7 @@
   white-space: nowrap;
 }
 .item-d {
+  text-align: center;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -160,21 +161,26 @@
 }
 
 /*edit tools*/
-.span-0 {
-  /* Added to reset styles correctly */
-  font-weight: normal; /* Reset b */
-  text-decoration: none; /* Reset u */
-  font-style: normal; /* Reset i */
+.textEdit {
+  margin-top: 50px;
 }
 
-.span-b {
-  font-weight: bold;
+.textEdit button {
+  background-color: aliceblue;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid black;
+  border-radius: 4px;
+  /*
+  background-color: aliceblue;
+  -moz-box-shadow: inset 0 0 4px #000000;
+  -webkit-box-shadow: inset 0 0 4px #000000;
+  box-shadow: inset 0 0 4px #000000;
+  */
 }
 
-.span-u {
-  text-decoration: underline;
-}
-
-.span-i {
-  font-style: italic;
+.textEdit button:hover {
+  background-color: #00bd86;
 }

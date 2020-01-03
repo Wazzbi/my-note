@@ -45,37 +45,67 @@ export class MyNoteComponent implements OnInit {
     this.myServiceService.deleteNote(note).subscribe();
   }
 
-  changeStyle(style: any): void {
-    let sel = window.getSelection(); // Gets selection
-    if (sel.rangeCount) {
-      // Creates a new element, and insert the selected text with the chosen style
-      let e = document.createElement("span");
-      e.classList.add(style.value); // Selected style (class)
-      e.innerHTML = sel.toString(); // Selected text
-
-      // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
-      let range = sel.getRangeAt(0);
-      range.deleteContents(); // Deletes selected text…
-      range.insertNode(e); // … and inserts the new element at its place
-    }
-  }
-
   toBold(): void {
     let sel = window.getSelection(); // Gets selection
     if (sel.rangeCount) {
       // Creates a new element, and insert the selected text with the chosen style
       let e = document.createElement("span");
-      e.classList.add("span-b"); // Selected style (class)
+      e.style.fontWeight = "bold";
+      //e.classList.add("span-b"); --> nefunguje // Selected style (class)
       e.innerHTML = sel.toString(); // Selected text
 
       // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
       let range = sel.getRangeAt(0);
       range.deleteContents(); // Deletes selected text…
       range.insertNode(e); // … and inserts the new element at its place
-
-      console.log(`klasy jsou ${e.classList}`);
     }
   }
 
-  //https://stackoverflow.com/questions/50286692/changing-a-small-amount-of-text-in-a-textarea-to-bold
+  toUnder(): void {
+    let sel = window.getSelection(); // Gets selection
+    if (sel.rangeCount) {
+      // Creates a new element, and insert the selected text with the chosen style
+      let e = document.createElement("span");
+      e.style.textDecoration = "underline";
+      //e.classList.add("span-b"); --> nefunguje // Selected style (class)
+      e.innerHTML = sel.toString(); // Selected text
+
+      // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
+      let range = sel.getRangeAt(0);
+      range.deleteContents(); // Deletes selected text…
+      range.insertNode(e); // … and inserts the new element at its place
+    }
+  }
+
+  toItalic(): void {
+    let sel = window.getSelection(); // Gets selection
+    if (sel.rangeCount) {
+      // Creates a new element, and insert the selected text with the chosen style
+      let e = document.createElement("span");
+      e.style.fontStyle = "Italic";
+      //e.classList.add("span-b"); --> nefunguje // Selected style (class)
+      e.innerHTML = sel.toString(); // Selected text
+
+      // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
+      let range = sel.getRangeAt(0);
+      range.deleteContents(); // Deletes selected text…
+      range.insertNode(e); // … and inserts the new element at its place
+    }
+  }
+
+  toNormal(): void {
+    let sel = window.getSelection(); // Gets selection
+    if (sel.rangeCount) {
+      // Creates a new element, and insert the selected text with the chosen style
+      let e = document.createElement("span");
+      e.style.fontWeight = "normal";
+      //e.classList.add("span-b"); --> nefunguje // Selected style (class)
+      e.innerHTML = sel.toString(); // Selected text
+
+      // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
+      let range = sel.getRangeAt(0);
+      range.deleteContents(); // Deletes selected text…
+      range.insertNode(e); // … and inserts the new element at its place
+    }
+  }
 }

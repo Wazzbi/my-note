@@ -10,13 +10,12 @@
 
   <!--edit tools-->
   <div class="item-d">
-    <select id="select_font" onchange="changeStyle(this)">
-      <option value="span-0" selected>None</option>
-      <option value="span-b">Bold</option>
-      <option value="span-u">Underlined</option>
-      <option value="span-i">Italic</option>
-    </select>
-    <button (click)="toBold()">Bold</button>
+    <div class="textEdit">
+      <button title="Bold" (click)="toBold()"><b>B</b></button>
+      <button title="Underlined" (click)="toUnder()"><u>U</u></button>
+      <button title="Italic" (click)="toItalic()"><i>I</i></button>
+      <button title="Normal" (click)="toNormal()">N</button>
+    </div>
   </div>
 
   <!-- text area -->
