@@ -2,7 +2,7 @@
   <!-- panel -->
   <div class="item-a">
     <div class="wrapper">
-      <button class="button" (click)="saveText(input.value); input.value = ''">
+      <button class="button" (click)="saveText()">
         <mat-icon class="colored-icon">save</mat-icon>
       </button>
     </div>
@@ -20,12 +20,14 @@
 
   <!-- text area -->
   <div class="item-b">
-    <textarea
-      spellcheck="false"
+    <div
+      class="textarea"
       id="input"
       #input
-      placeholder="Your text here..."
-    ></textarea>
+      spellcheck="false"
+      contentEditable="true"
+      data-text="Your text here..."
+    ></div>
   </div>
 
   <!--edit tools-->

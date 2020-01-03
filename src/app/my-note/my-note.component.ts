@@ -20,9 +20,10 @@ export class MyNoteComponent implements OnInit {
     this.getNotes();
   }
 
-  saveText(text: string): void {
+  saveText(): void {
     this.note = new Note();
-    this.note.data = text;
+    let ta = document.getElementById("input").innerHTML;
+    this.note.data = ta;
     console.log(`poznamka obsahuje data=${this.note.data}`);
     this.myServiceService.addNote(this.note).subscribe(note => {
       this.notes.push(note);
@@ -35,8 +36,8 @@ export class MyNoteComponent implements OnInit {
 
   showText(id: number): void {
     this.textToShow = this.notes[id - 1].data;
-    let ta = <HTMLTextAreaElement>document.getElementById("input");
-    ta.value = this.textToShow;
+    let ta = document.getElementById("input");
+    ta.innerHTML = this.textToShow;
   }
 
   deleteNote(note: Note): void {
