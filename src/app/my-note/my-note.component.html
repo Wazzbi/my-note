@@ -2,7 +2,7 @@
   <!-- panel -->
   <div class="item-a">
     <div class="wrapper">
-      <button class="button" (click)="saveText()">
+      <button class="button" title="Save" (click)="saveText()">
         <mat-icon class="colored-icon">save</mat-icon>
       </button>
     </div>
@@ -11,6 +11,7 @@
   <!--edit tools-->
   <div class="item-d">
     <div class="textEdit">
+      Edit Tools<br />
       <button title="Bold" (click)="toBold()"><b>B</b></button>
       <button title="Underlined" (click)="toUnder()"><u>U</u></button>
       <button title="Italic" (click)="toItalic()"><i>I</i></button>
@@ -29,8 +30,11 @@
     ></div>
   </div>
 
-  <!--edit tools-->
-  <div class="item-e">hello</div>
+  <!--drag and drop-->
+  <div class="item-e">
+    drag and drop<br />
+    (3 okna na odkládání)
+  </div>
 
   <!-- saved files -->
   <div class="item-c">
