@@ -43,4 +43,19 @@ export class MyNoteComponent implements OnInit {
     this.notes = this.notes.filter(n => n !== note);
     this.myServiceService.deleteNote(note).subscribe();
   }
+
+  changeStyle(style: any): void {
+    var sel = window.getSelection(); // Gets selection
+    if (sel.rangeCount) {
+      // Creates a new element, and insert the selected text with the chosen style
+      var e = document.createElement("span");
+      e.classList.add(style.value); // Selected style (class)
+      e.innerHTML = sel.toString(); // Selected text
+
+      // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
+      var range = sel.getRangeAt(0);
+      range.deleteContents(); // Deletes selected text…
+      range.insertNode(e); // … and inserts the new element at its place
+    }
+  }
 }

@@ -30,6 +30,22 @@
   overflow-y: auto;
   white-space: nowrap;
 }
+.item-d {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(217, 219, 55);
+}
+
+.item-e {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(233, 95, 71);
+}
+
 /*panel*/
 .colored-icon {
   color: rgb(2, 1, 1);
@@ -144,4 +160,24 @@ textarea {
 }
 .close-button:hover {
   color: rgb(240, 58, 34);
+}
+
+/*edit tools*/
+.textarea .span-0 {
+  /* Added to reset styles correctly */
+  font-weight: normal; /* Reset b */
+  text-decoration: none; /* Reset u */
+  font-style: normal; /* Reset i */
+}
+
+.textarea .span-b {
+  font-weight: bold;
+}
+
+.textarea .span-u {
+  text-decoration: underline;
+}
+
+.textarea .span-i {
+  font-style: italic;
 }
