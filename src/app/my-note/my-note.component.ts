@@ -2,6 +2,7 @@ import { element } from "protractor";
 import { MyServiceService } from "./../my-service.service";
 import { Note } from "./../note";
 import { Component, OnInit } from "@angular/core";
+import { not } from "@angular/compiler/src/output/output_ast";
 
 @Component({
   selector: "app-my-note",
@@ -11,6 +12,7 @@ import { Component, OnInit } from "@angular/core";
 export class MyNoteComponent implements OnInit {
   note: Note;
   notes: Note[];
+  textToShow: string;
 
   constructor(private myServiceService: MyServiceService) {}
 
@@ -18,7 +20,7 @@ export class MyNoteComponent implements OnInit {
     this.getNotes();
   }
 
-  saveText(text: String): void {
+  saveText(text: string): void {
     this.note = new Note();
     this.note.data = text;
     console.log(`poznamka obsahuje data=${this.note.data}`);
@@ -31,8 +33,14 @@ export class MyNoteComponent implements OnInit {
     this.myServiceService.getNotes().subscribe(notes => (this.notes = notes));
   }
 
-  //TODO dolělat aby se text vracel do textarea asi přes servisku
-  //vytvořit objekt a ten načíst
-  //rozdělaný my-note.html row 23
-  showText(id: number): void {}
+  showText(id: number): void {
+    this.textToShow = this.notes[id - 1].data;
+    let ta = <HTMLTextAreaElement>document.getElementById("input");
+    ta.value = this.textToShow;
+  }
+
+  deleteNote(note: Note): void {
+    this.notes = this.notes.filter(n => n !== note);
+    this.myServiceService.deleteNote(note).subscribe();
+  }
 }

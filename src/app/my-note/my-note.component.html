@@ -9,18 +9,26 @@
   </div>
   <!-- text area -->
   <div class="item-b">
-    <textarea id="input" #input placeholder="Your text here"></textarea>
+    <textarea
+      spellcheck="false"
+      id="input"
+      #input
+      placeholder="Your text here..."
+    ></textarea>
   </div>
   <!-- saved files -->
   <div class="item-c">
     <div class="wrapper-c">
-      <a *ngFor="let note of notes" class="file-unit">
-        <button class="file-block" (click)="showText(data.value)">
+      <div *ngFor="let note of notes" class="file-unit">
+        <button class="close-button" (click)="deleteNote(note)">
+          <mat-icon>close</mat-icon>
+        </button>
+        <button class="file-block" (click)="showText(note.id)">
           {{ note.id }}
           <br />
-          <span #data>{{ note.data }}</span>
+          {{ note.data }}
         </button>
-      </a>
+      </div>
     </div>
   </div>
 </div>
