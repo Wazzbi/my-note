@@ -12,7 +12,11 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: rgb(53, 93, 224);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 0.8379726890756303) 8%,
+    rgba(20, 95, 231, 1) 38%
+  );
 }
 .item-b {
   grid-column-start: 2;
@@ -48,6 +52,15 @@
 }
 
 /*panel*/
+.logo {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-family: "Courier New", Courier, monospace;
+  color: #d8d8d8;
+  font-size: 50px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 .colored-icon {
   color: rgb(2, 1, 1);
   background: none;
@@ -93,6 +106,7 @@
   padding: 20px;
   width: 90%;
   height: 85%;
+  outline: none;
 
   border: 3px solid black;
   border-radius: 10px;
@@ -181,6 +195,7 @@
 
 /*close button*/
 .close-button {
+  text-align: center;
   border: none;
   background: transparent;
   position: relative;
@@ -192,7 +207,14 @@
   color: rgb(240, 58, 34);
 }
 
-/*edit tools*/
+.slit-out-vertical {
+  -webkit-animation: slit-out-vertical 0.5s ease-in both;
+  animation: slit-out-vertical 0.5s ease-in both;
+}
+
+/*****************************
+edit tools
+******************************/
 .textEdit {
   margin-top: 50px;
 }
@@ -217,4 +239,12 @@
 
 .textEdit button:hover {
   background-color: #00bd86;
+}
+
+.svgInCenter {
+  position: relative;
+  left: 60%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }

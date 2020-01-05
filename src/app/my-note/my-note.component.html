@@ -1,6 +1,7 @@
 <div class="container">
   <!-- panel -->
   <div class="item-a">
+    <div class="logo"><b>My-Note</b></div>
     <div class="wrapper">
       <button class="button" title="Save" (click)="saveText()">
         <mat-icon class="colored-icon">save</mat-icon>
@@ -11,11 +12,21 @@
   <!--edit tools-->
   <div class="item-d">
     <div class="textEdit">
-      Edit Tools<br />
+      Font Edit Tools
+      <br />
       <button title="Bold" (click)="toBold()"><b>B</b></button>
       <button title="Underlined" (click)="toUnder()"><u>U</u></button>
       <button title="Italic" (click)="toItalic()"><i>I</i></button>
       <button title="Normal" (click)="toNormal()">N</button>
+      <br />
+      <br />
+      Highlighter
+      <br />
+      <button title="colorize">
+        <mat-icon class="svgInCenter" (click)="toColorized()"
+          >colorize</mat-icon
+        >
+      </button>
     </div>
   </div>
 
@@ -32,7 +43,7 @@
 
   <!--drag and drop-->
   <div class="item-e">
-    drag and drop<br />
+    TODO: drag and drop<br />
     (3 okna na odkládání)
   </div>
 

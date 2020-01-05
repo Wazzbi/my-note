@@ -108,4 +108,20 @@ export class MyNoteComponent implements OnInit {
       range.insertNode(e); // … and inserts the new element at its place
     }
   }
+
+  toColorized(): void {
+    let sel = window.getSelection(); // Gets selection
+    if (sel.rangeCount) {
+      // Creates a new element, and insert the selected text with the chosen style
+      let e = document.createElement("span");
+      e.style.backgroundColor = "yellow";
+      //e.classList.add("span-b"); --> nefunguje // Selected style (class)
+      e.innerHTML = sel.toString(); // Selected text
+
+      // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
+      let range = sel.getRangeAt(0);
+      range.deleteContents(); // Deletes selected text…
+      range.insertNode(e); // … and inserts the new element at its place
+    }
+  }
 }
