@@ -1,3 +1,7 @@
+# See result
+
+my-note-ac1d2.firebaseapp.com
+
 # MyNote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
